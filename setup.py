@@ -39,7 +39,7 @@ def get_version(fname=os.path.join('align_videos_by_soundtrack', '__init__.py'))
 def get_long_description():
     descr = []
     for fname in ('README.md',):  # for PyPI, actually rst is suitable rather than markdown.
-        with open(fname) as f:
+        with open(fname, encoding = 'utf-8') as f:
             descr.append(f.read())
     return '\n\n'.join(descr)
 
